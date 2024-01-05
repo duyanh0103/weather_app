@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylecss/mainstyle.css">
+    <link rel="stylesheet" href="../stylecss/signinup.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <nav class="header_navbar">
+            <ul class="header_navbar-list">
+                <li class="header_navbar-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                    <div class="menu-child">
+                        <div class="menu-child">
+                            <ul class="menu-child-list">
+                                <li><a href="main.html">Home</a></li>
+                                <li><a href="boardgames.html">Boardgames</a></li>
+                                <li><a href="games.html">Games</a></li>
+
+                            </ul>
+                        </div>
+                        </i>
+
+                </li>
+
+                <li class="header_navbar-item " id="website_name">
+                    <a href="main.html"></a>Christmast Mana</li>
+                <li class="header_navbar-item "><input type="text " placeholder="Search ">
+                    <i class="fa fa-search "></i></li>
+            </ul>
+            <ul class="header_navbar-list ">
+                <li class="header_navbar-item "><a href="signin.html ">Sign in<i class="fa fa-sign-in "></i></a></li>
+                <li class="header_navbar-item "><a href="signup.html ">Sign up<i class="fa fa-sign-out "></i></a></li>
+                <li class="header_navbar-item "><a href="bag.html "><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <li class="header_navbar-item"><a href="../index.html">Weather</a><svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M0 336c0 79.5 64.5 144 144 144H512c70.7 0 128-57.3 128-128c0-61.9-44-113.6-102.4-125.4c4.1-10.7 6.4-22.4 6.4-34.6c0-53-43-96-96-96c-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192c0 2.7 .1 5.4 .2 8.1C40.2 219.8 0 273.2 0 336z"/></svg></li>
+
+            </ul>
+        </nav>
+        </div>
+        <div class="box">
+            <h1>Sign In</h1>
+            <p>Welcome back! 🖤♡♥️</p>
+            <form id="loginForm" onsubmit="return validateLoginForm();">
+                <div class="text-box">
+                    <h4>Email</h4>
+                    <input type="text" placeholder="Your email" name="loginEmail" id="loginEmail">
+                </div>
+                <div class="text-box">
+                    <h4>Password</h4>
+                    <input type="password" placeholder="Your password" name="loginPassword" id="loginPassword">
+                </div>
+                <div class="text-box">
+                    <button type="submit">Submit</button>
+                    <p class="alert">(*) No account? <a href="signup.html">Sign up</a></p>
+                </div>
+
+            </form>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-container ">
+            <div class="footer-items ">
+                <h3>Get Help</h3>
+                <a href="# ">Order Status</a>
+                <br>
+                <a href="# ">Delivery</a>
+                <br>
+                <a href="# ">Returns</a>
+                <br>
+                <a href="# ">Contact Us</a>
+            </div>
+            <div class="footer-items ">
+                <h3>Customer Care</h3>
+                <a href="# ">Feedback</a>
+
+            </div>
+            <div class="footer-items ">
+                <h3>Our Social</h3>
+                <a href="# ">Facebook</a>
+                <br>
+                <a href="# ">Twitter</a>
+                <br>
+                <a href="# ">Instagram</a>
+
+            </div>
+            <div class="footer-items ">
+                <h3>Payment Options</h3>
+                <p>Visa</p>
+                <p>Debit</p>
+                <p>JCB</p>
+                <p>American Express</p>
+            </div>
+        </div>
+
+
+
+
+        <script src="../js/signinout.js"></script>
+
+
+        <script>
+            function validateLoginForm() {
+                const loginEmail = document.getElementById('loginEmail').value;
+                const loginPassword = document.getElementById('loginPassword').value;
+
+                if (loginEmail.trim() === '' || loginPassword.trim() === '') {
+                    alert('Please fill in all information .');
+                    return false;
+                }
+
+                alert('Sign in successfully.');
+                return true;
+            }
+
+            // function validateRegisterForm() {
+            //     const fullName = document.getElementById('fullName').value;
+            //     const email = document.getElementById('email').value;
+            //     const pwd = document.getElementById('pwd').value;
+            //     const rePwd = document.getElementById('rePwd').value;
+
+            //     if (fullName.trim() === '' || email.trim() === '' || pwd.trim() === '' || rePwd.trim() === '') {
+            //         alert('Please fill in all information .');
+            //         return false;
+            //     }
+
+            //     if (pwd !== rePwd) {
+            //         alert('Password and re-enter password do not match.');
+            //         return false;
+            //     }
+
+            //     alert('Sign in successfully.');
+            //     return true;
+            // }
+        </script>
+
+
+
+</body>
+
+</html>
